@@ -3,33 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 <main>
   <div class="cards">
     <div class="card-front">
-      <p id="card-number">
-        0000 0000 0000 0000
-      </p>
-      <p id="card-holder">
-        Jane Appleseed
-        <span id="expire-date">
-          00/00
-        </span>
-      </p>
+      <img src="images/bg-card-front.png" alt="card-front">
+      <div class="front-card-text">
+        <p id="card-number">
+          0000 0000 0000 0000
+        </p>
+        <p id="card-holder">
+          Jane Appleseed
+          <span id="card-expire-date">
+            00/00
+          </span>
+        </p>
+      </div>
     </div>
     <div class="card-back">
-      <p>000</p>
+      <img src="images/bg-card-back.png" alt="card-back">
+      <div class="back-card-text">
+        <p>000</p>
+      </div>
     </div>
   </div>
 
@@ -48,13 +48,19 @@
       </label>
     </div>
 
-    <div>
+    <div id="expire-date">
       <label for="">
-        Exp. Date (MM/YY)
+        Exp. Date 
+        <input type="number" name="" id="" placeholder="MM">
       </label>
-      <input type="number" name="" id="" placeholder="MM">
-      <input type="number" name="" id="" placeholder="YY">
-      <input type="text" name="" id="" placeholder="e.g. 123">
+      <label for="">
+        (MM/YY)
+        <input type="number" name="" id="" placeholder="YY">
+      </label>
+      <label for="">
+        cvc
+        <input type="text" name="" id="" placeholder="e.g. 123">
+      </label>
     </div>
 
     <button>
@@ -64,15 +70,11 @@
 
 
   <!-- Completed state start -->
-  <div id="thanks">
+  <div id="thanks" style="display: none;">
     Thank you!
     We've added your card details
     Continue
   </div>
 </main>  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
