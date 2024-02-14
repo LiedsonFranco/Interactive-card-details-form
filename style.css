@@ -60,12 +60,34 @@ body{
     left: 200px;
 }
 .front-card-text{
-    width: 95%;
+    width: 90%;
     margin: auto;
     position: relative;
-    top: -110px;
+    top: -100px;
     font-size: 12px;
-    padding: 5px;
+    padding: 4px;
+}
+.circules{
+    width: 95%;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: -35px;
+}
+.big_circule{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+.small_circule{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-left: 10px;
 }
 #card-number-label{
     font-size: 1.2rem;
